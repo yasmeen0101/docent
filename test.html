@@ -5,7 +5,7 @@
     <style>
     .swipe_up{
       border-radius: 5px;
-      width: 500px;
+      width: 30vw;
       height: 5vh;
       background-color: #212121;
       color: #c3c5c5;
@@ -14,8 +14,7 @@
       text-align: center;
       display: table-cell; /*display as table cell to make possible vertical align */
       vertical-align: middle;
-  
-      margin: 0 auto;
+      
 
       }
       
@@ -24,14 +23,19 @@
         bottom: 0;
         width: 100%;
       }
-
+      #center {
+        width: 500px;
+        margin: 0 auto;
+      }
     </style>
   </head>
   
   <body>
     
-    <div id="footer" class = "swipe_up">
-      ↑ swipe up for appendix ↑ 
+    <div id="footer">
+        <div id="center" class="swipe_up">
+          ↑ swipe up for appendix ↑ 
+        </div>
     </div>
     
   </body>
