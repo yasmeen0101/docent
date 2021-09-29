@@ -1,32 +1,56 @@
+<!doctype html>
+<html class="no-js light" lang="">
 
-<html>
-  <head>
-    <title> test </title>
-    
-    <style>
-      .backgroundtest{
-        position:absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: #c3c5c5;
-      }
-      .appendix{
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1VQ2XMJVJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-P1VQ2XMJVJ');
+  </script>
+  <meta charset="utf-8">
+  <title>kate-hers RHEE: Inventing Genealogies</title>
+  <meta name="description"
+    content="The online exhibition kate-hers RHEE: Inventing Genealogies will be on view October 4 – December 3, 2021, presented by the New Media Artspace at Baruch College and generously sponsored by the Wasserman Jewish Studies Center.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="kate-hers RHEE: Inventing Genealogies">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://newmediartspace.info/exhibitions/2021_kate-hers-rhee_inventing-genealogies/">
+  <meta property="og:image" content="https://newmediartspace.info/exhibitions/2021_kate-hers-rhee_inventing-genealogies/img/tree-rings-with-map.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#1d1d1d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <style>
+    .appendix{
       position: absolute;
-      top:0;
-      left:100%;
+      top:100%;
+      left:0;
       width:100vw;
       height:100vh;
       background-color:#212121;
     }
-      
-    /** ACTUAL BUTTON **/
+    
     .swipe_up{
       border-radius: 5px;
-      width: 30vw;
+      width: 40vw;
       height: 5vh;
-      background-color: #212121;
+      background-color: rgb(33,33,33, 0.8);
       color: #c3c5c5;
       font: 1.3em "Lato", sans-serif;
       font weight: bold;
@@ -35,7 +59,6 @@
 
       }
       
-     /** CENTERING BUTTON **/
       #footer {
         position: fixed;
         bottom: 0;
@@ -45,118 +68,44 @@
         width: 500px;
         margin: 0 auto;
       }
-    </style>
-  </head>
-  
-  <body>
-    
-    <!-- MAIN PAGE -->
-    <div  id="page1"
+  </style>
+</head>
+
+
+<body class="light">
+  <div class="texture"></div>
+  <div class="background scaled-background scaled-up" id="background"></div>
+  <div  id="page1"
             ontouchstart="p1handleTouchStart(event)"
             ontouchmove="p1handleTouchMove(event)"
             ontouchend="p1handleTpuchEnd(event)">
-     <div class="backgroundtest"></div>
-    
-    <!-- SWIPE BUTTON -->
-    <div id="footer">
+
+  <div class="centered-column-container quote-bg-2">
+    <div class="embed-container">
+      <iframe src="https://player.vimeo.com/video/594798705?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;h=bff912475a" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Tongue Twister"></iframe>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+      <span class="next-arrow" onclick="zoomTransition('tv.html')">continue &#8594;</span>
+
+    </div> <img class="minimap" src="img/minimap-rhee-light-3.png" />
+
+  </div>
+  
+   <div id="footer">
         <div id="center" class="swipe_up">
           ↑ swipe up for appendix ↑ 
         </div>
     </div>
-    </div>
-    
-    <!-- APPENDIX -->
-    <div class="appendix" id ="page2"
-         ontouchstart="p2handleTouchStart(event)"
-            ontouchmove="p2handleTouchMove(event)"
-            ontouchend="p2handleTpuchEnd(event)">
-    Appendix
-    </div>
-    
-  </body>
-  
-  <script>
-    var p1 = document.getElementById('page1');
-    var p1 = document.getElementById('page2');
-    
-    var startingX;
-    function p1handleTouchStart(evt){
-      startingX = evt.touches[0].clientX;
-    };
-    
-    function p1handleTouchMove(evt){
-      var touch = evt.touches[0];
-      var change = startingX - touch.clientX;
-      
-      if (change< 0){
-        return;
-      }
-      
-      p1.style.left = '-' + change + 'px';
-      p2.style.display = 'block';
-      p2.style.left = (screen.width - change) + 'px';
-      evt.preventDefault();
-    }
-    
-    function p1handeTouchEnd(evt){
-      var change = startingX - evt.changedTouches[0].clientX;
-      var threshold = screen.width/3;
-      if (change < threshold){
-        p1.style.left = 0;
-        p2.style.left = '100%';
-        p2.style.display = 'none';
-      }
-      else{
-        p1.style.transition = 'all .3s';
-        p2.style.transition = 'all .3s';
-        p1.style.left = '-100%';
-        p2.style.left = '0';
-        p2.style.left = '100%';
-        p2.style.display = 'block';
-      }
-      };
-    
-    
-    
-    	function p2handleTouchStart(evt){
-		startingX = evt.touches[0].clientX;
-		p1.style.transition = '';
-		p2.style.transition = '';
-		p2.style.display = 'none';
-	}
+   
 
-    function p2handleTouchMove(evt){
-      var touch = evt.touches[0];
-      var change = startX - touch.clientX;
-      
-      if (change< 0){
-        return;
-      }
-      
-      
-      p1.style.display = 'block';
-      p1.style.left = (change - screen.width) + 'px';
-      p2.style.left = change + 'px';
-      evt.preventDefault();
-    }
-    
-    function p2handeTouchEnd(evt){
-      var change = evt.changedTouches[0].clientX - startingX;
-      var half = screen.width/4;
-      if (change < half){
-        p1.style.left = '-100%';
-        p1.style.display = 'none';
-        p2.style.left = '0';
-        
-      }
-      else{
-        p1.style.transition = 'all .3s';
-        p2.style.transition = 'all .3s';
-        p1.style.left = '-100%';
-        p2.style.left = '0';
-        p2.style.left = '100%';
-      }
-    };
-     </script>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/main.js"></script>
   
+  
+  <div class="appendix" id ="page2">
+    Appendix
+  </div>
+ 
+</body>
+
 </html>
+
