@@ -48,7 +48,7 @@
     
     .swipe_up{
       border-radius: 5px;
-      width: 30vw;
+      width: 40vw;
       height: 5vh;
       background-color: rgb(33,33,33, 0.8);
       color: #c3c5c5;
@@ -89,8 +89,9 @@
    <div id="footer">
         <div id="center" class="swipe_up">
           <div id="page1"
-          ontouchstart="p1handleTouchStart(event)"
-          ontouchmove="p1handleTouchMove(event)">
+            ontouchstart="p1handleTouchStart(event)"
+            ontouchmove="p1handleTouchMove(event)"
+            ontouchend="p1handleTpuchEnd(event)">
           ↑ swipe up for appendix ↑ 
         </div>
     </div>
