@@ -14,7 +14,7 @@
       .appendix{
       position: absolute;
       top:0;
-      left:50%;
+      left:0%;
       width:100vw;
       height:100vh;
       background-color:#212121;
@@ -50,6 +50,10 @@
   <body>
     
     <!-- MAIN PAGE -->
+    <div  id="page1"
+            ontouchstart="p1handleTouchStart(event)"
+            ontouchmove="p1handleTouchMove(event)"
+            ontouchend="p1handleTpuchEnd(event)">
      <div class="backgroundtest"></div>
     
     <!-- SWIPE BUTTON -->
@@ -57,6 +61,7 @@
         <div id="center" class="swipe_up">
           ↑ swipe up for appendix ↑ 
         </div>
+    </div>
     </div>
     
     <!-- APPENDIX -->
