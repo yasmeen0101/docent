@@ -2,27 +2,19 @@
 
 <head>
   <title>test4</title>
-  
+  <style>
+    
+    .control-me {
+  /* Default state */
+}
+#toggle:checked ~ .control-me {
+  /* A toggled state! No JavaScript! */
+}
+  </style>
 
   </head>
 <body>
-    <style>
-    #example {
-  position: relative;
-}
-#example-checkbox {
-  display: none;
-}
-#example-checkbox:checked + #example:after {
-  content: "Hide";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: white;
-}
-  </style>
-  <input id="example-checkbox" type="checkbox">
-<label for="example" id="example">Show</label>
+  <label for="toggle">Do Something</label>
+<input type="checkbox" id="toggle">
+<div class="control-me">Control me</div>
   </body>
