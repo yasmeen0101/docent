@@ -1,0 +1,27 @@
+<html class="no-js light" lang="">
+
+<head>
+  <title>test4</title>
+  
+  <style>
+    #example {
+  position: relative;
+}
+#example-checkbox {
+  display: none;
+}
+#example-checkbox:checked + #example:after {
+  content: "Hide";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+}
+  </style>
+  </head>
+<body>
+  <input id="example-checkbox" type="checkbox">
+<label for="example" id="example">Show</label>
+  </body>
