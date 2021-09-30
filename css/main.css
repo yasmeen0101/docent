@@ -13,6 +13,7 @@ html {
   font-size: 1em;
   line-height: 1.4;
    
+   font-family: sans-serif;
    scroll-snap-type: mandatory;
    scroll-snap-points-y: repeat(100%);
    scroll-snap-type: y mandatory;
