@@ -38,6 +38,37 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <style>
     * {
+      #example-five {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10%;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+#example-five-checkbox {
+  display: none;
+}
+#example-five-checkbox:checked + #example-five:after {
+  content: "When I entered elementary school, I had a strong speech impediment including a lisp and most people had a hard time understanding me. Because my adopted Korean sister could understand me, people assumed I was speaking in Korean and she was translating for me. In order to overcome my speech impediment, I was sent to special education classes to have oral-motor speech therapy. I hazily remember sitting in a classroom with children that had mental and physical disabilities and not understanding what my problem was. I didn’t understand that no one outside of my immediate family had trouble understanding me.";
+-webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 10%;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  background: white;
+}
   box-sizing: border-box;
 }
 html {
@@ -148,9 +179,9 @@ html {
   
   <section>
   <label for="example" id="example"> ↓ swipe down to return to art ↓ </label>
-  <div class = "quote">
-    When I entered elementary school, I had a strong speech impediment including a lisp and most people had a hard time understanding me. Because my adopted Korean sister could understand me, people assumed I was speaking in Korean and she was translating for me. In order to overcome my speech impediment, I was sent to special education classes to have oral-motor speech therapy. I hazily remember sitting in a classroom with children that had mental and physical disabilities and not understanding what my problem was. I didn’t understand that no one outside of my immediate family had trouble understanding me. 
-    </div>
+  <input type="checkbox" id="example-five-checkbox" />
+<label id="example-five" for="example-five-checkbox">
+  Nhwe I eernetd eamyetlenr oohlcs, I dah a tsngor scpeeh nmimpediet inclgudin a lisp dna tsom eelopp had a hadr emit nagdtnnerusdi em. Bescuea my ddpoeta Keonra stiers doclu nertduadns em, plepeo ssdumea I was ipkngsae ni Knoear adn ehs saw iatntsrangl for em. Ni drroe to overmeco my spehce imeipnmdet, I was ents ot icepasl dcuieoant sessalc to ahev rloa-oortm speehc parhtye. I zyahli ermbemre tsniitg ni a rcloasoms tiwh lhdrcnie ttha had naeltm dna phlcysia dibssieitial nad nto tsrdanedinung what ym oprelmb was. I didn’t ndureadsnt taht on one utiosed fo ym mateeidmi imaylf had orlutbe unaidderngnst em. </label>
   <div class="appendix">
     Appendix
    
