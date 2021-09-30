@@ -42,12 +42,14 @@
     .container{
       max-height:100vh;
       overflow: scroll;
+      scroll-snap-type:y;
 
     }
 
     .item{
       border-bottom:10px solid white;
       display: flex;
+      scroll-snap-align:start;
     }
     .appendix{
       position: absolute;
