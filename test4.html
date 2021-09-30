@@ -3,13 +3,13 @@
 <head>
   <title>test4</title>
   <style>
-  #example {
+  #example-five {
   position: relative;
 }
-#example-checkbox {
+#example-five-checkbox {
   display: none;
 }
-#example-checkbox:checked + #example:after {
+#example-five-checkbox:checked + #example-five:after {
   content: "Hide";
   position: absolute;
   top: 0;
@@ -22,6 +22,7 @@
 
   </head>
 <body>
- <input id="example-checkbox" type="checkbox">
-<label for="example" id="example">Show</label>
+<h2>CSS Only Way</h2>
+<input type="checkbox" id="example-five-checkbox" />
+<label id="example-five" for="example-five-checkbox">Show</label>
   </body>
